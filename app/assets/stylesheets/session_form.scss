@@ -1,0 +1,440 @@
+
+.loginHeader h1 {
+  margin: 0px 16px 16px 0;
+}
+
+.loginWrapper {
+  width: 460px;
+  height: 322px;
+}
+
+.errorWrapper {
+  width: 393px;
+  height: 67px;
+  margin-left: 24px;
+  margin-top: 16px;
+}
+
+.accountContainer {
+  display: inline-block;
+  width: 445px;
+  padding: 5px;
+  /* background-color: #EFEFEF; */
+  margin: 14px 23px 40px 0;
+  border-radius: 3px;
+  border: solid 1px #DDDBDC;
+  height: auto;
+  vertical-align: top;
+}
+
+  .accountContainer:nth-child(2) {
+    margin: 14px 0 0;
+  }
+
+  .accountContainer h2 {
+    color: #ebb800;
+    margin-left: 24px;
+    margin-top: 14px;
+    line-height: 120%;
+    font-size: 17px;
+  }
+
+  .accountContainer hr {
+    border: 0;
+    height: 0;
+    border-top: 0 px dotted #DCDADB;
+    border-bottom: 1px dotted #DCDADB;
+    margin: 8px 24px 5px 24px;
+  }
+
+.innerBox {
+  /* background-color: #9e939b; */
+  padding: 5px;
+  border-radius: 3px;
+  /* opacity: 10%; */
+}
+
+.accountContainer h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  color: #595959;
+  margin: 0 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px #DDDBDC dotted;
+  font-weight: normal;
+}
+
+.accountLogin {
+  display: block;
+  width: 400px;
+  height: 270px;
+}
+
+form ul {
+  list-style-type: none;
+}
+
+ul.newPassword {
+  margin: 0 0 0 25px;
+}
+
+.formInputPassword input {
+  width: 100%;
+  border: 1px solid #DDDBDC;
+  box-shadow: 0 0 0 3px #EFEFEF;
+  padding: 7px;
+  background-image: url("../Content/images/passwordicon.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+#loginContainer .formInputPassword input  {
+  margin-bottom: 10px;
+}
+
+.formInputEmail input {
+  width: 100%;
+  border: 1px solid #DDDBDC;
+  box-shadow: 0 0 0 3px #EFEFEF;
+  padding: 7px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.accountLogin__recaptchaText {
+    line-height: 1.25rem;
+    margin-bottom: 15px;
+    color: #999;
+    margin-bottom: 0;
+}
+
+/* Hide ReCaptcha Badge */
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
+.textfield {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  color: #999999;
+}
+
+  .textfield:focus, textarea:focus {
+    box-shadow: 0 0 5px #ebb800;
+    border: 1px solid #ebb800;
+    color: #000;
+  }
+
+    .textfieldError:focus, textarea:focus error {
+      box-shadow: 0 0 5px #E4B8BE;
+      border: 1px solid #E4B8BE;
+      color: #A41428;
+      background-color: #F8EDEE;
+    }
+
+.textfieldError {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  color: #A41428;
+}
+
+.verticalAlignMiddle {
+  vertical-align: middle;
+}
+
+/* Styling for Error Message */
+.errorLogin {
+  color: #A41428;
+  border: #E4B8BE 1px solid;
+  /* background-color: #F6E8EA; */
+  padding: 8px;
+}
+
+  .errorLogin p {
+    margin: 3px 0px;
+    line-height: 15px;
+    font-size: 11.5px;
+  }
+
+.completeMessage {
+  color: #86B437;
+  border: 1px solid #DAE8C3;
+  background-color: #EDF4E1;
+  padding: 8px;
+}
+
+  .completeMessage p {
+    margin: 3px 0px;
+    line-height: 15px;
+    font-size: 11.5px;
+  }
+
+.formInputPasswordError input {
+  width: 100%;
+  border: 1px solid #E4B8BE;
+  box-shadow: 0 0 0 3px #EFEFEF;
+  background-color: #F8EDEE;
+  padding: 7px;
+  background-image: url("../Content/images/passwordicon_alert.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.formInputEmailError input {
+  width: 400px;
+  height: 20px;
+  border: 1px solid #E4B8BE;
+  box-shadow: 0 0 0 3px #EFEFEF;
+  background-color: #F8EDEE;
+  /* padding: 7px; */
+  background-image: url("../Content/images/emailicon_alert.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  /* margin-bottom: 5px; */
+  box-sizing: border-box;
+}
+
+.checkbox {
+  font: 12px;
+  color: #595959;
+  width: 400px;
+  display: block;
+  clear: both;
+  margin-left: 24px;
+}
+
+.accountLogin .checkbox {
+    margin: 5px 0 15px 24px;
+}
+
+  .checkbox input {
+    padding-right: 3px;
+  }
+
+.forgotPassword {
+  display: inline-block;
+  margin-left: 24px;
+}
+
+  .forgotPassword a {
+    text-decoration: none;
+    color: #0E5B93;
+  }
+
+    .forgotPassword a:hover {
+      text-decoration: underline;
+    }
+
+.formInputPasswordInput:focus, textarea:focus {
+  box-shadow: 0 0 5px #C2D99B;
+  border: 1px solid #C2D99B;
+  color: #000;
+}
+
+.formInputPasswordInput {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  color: #999999;
+}
+
+.formInputPasswordInputError:focus, textarea:focus error {
+  box-shadow: 0 0 5px #E4B8BE;
+  border: 1px solid #E4B8BE;
+  color: #A41428;
+  background-color: #F8EDEE;
+}
+
+.formInputPasswordInputError {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  color: #999999;
+}
+
+.tcgButton-narrow {
+  padding: 4px 12px;
+}
+
+.buttonLogin {
+  height: 36px;
+  margin-left: 24px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.GreenButtonNoArrow {
+  background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ebb800), color-stop(1, #e09036) );
+  background: -moz-linear-gradient( center top, #ebb800 5%, #e09036 100% );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#86b437', endColorstr='#b5d186');
+  background-color: #ebb800;
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  border-top-right-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  border-bottom-right-radius: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  border-bottom-left-radius: 8px;
+  text-indent: 0px;
+  border: 1px solid #ebb800;
+  display: inline-block;
+  // color: #ffffff;
+  font-family: Luminari, fantasy;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  height: 35px;
+  line-height: 35px;
+  text-decoration: none;
+  text-align: center;
+  padding: 0px 10px 0px 10px;
+  cursor: pointer;
+  width: 152px
+}
+
+  .GreenButtonNoArrow.fullwidth {
+    width: 100%;
+  }
+
+  .GreenButtonNoArrow:hover {
+    -moz-box-shadow: 2px 2px 3px 0px #b2b2b2;
+    -webkit-box-shadow: 2px 2px 3px 0px #b2b2b2;
+    box-shadow: 2px 2px 3px 0px #b2b2b2;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e09036), color-stop(1, #ebb800) );
+    background: -moz-linear-gradient( center top, #e09036 5%, #ebb800 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e09036', endColorstr='#86b437');
+    background-color: #e09036;
+  }
+
+  .GreenButtonNoArrow:active {
+    -moz-box-shadow: 2px 2px 3px 0px #b2b2b2;
+    -webkit-box-shadow: 2px 2px 3px 0px #b2b2b2;
+    box-shadow: 2px 2px 3px 0px #b2b2b2;
+    border: 1px solid #658729;
+    position: relative;
+  }
+
+  .GreenButtonNoArrow img {
+    margin-right: 20px;
+  }
+
+  #daze {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+  
+#emailinput {
+  background-image: url("https://store.tcgplayer.com/Content/images/emailicon.png");
+}
+
+#passwordinput {
+  background-image: url("https://store.tcgplayer.com/Content/images/passwordicon.png");
+}
+
+#background-video {
+   position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+@font-face {
+  font-family: "Luminari, fantasy";
+  // src: url("/XXIIARABIAN-ONENIGHTSTAND.ttf");
+}
+
+.container {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.neon {
+  color: #FB4264;
+  font-size: 1.25vw;
+  line-height: 1.25vw;
+  text-shadow: 0 0 .5vw #F40A35;
+}
+
+.neon {
+  animation: neon 3s ease infinite;
+  -moz-animation: neon 3s ease infinite;
+  -webkit-animation: neon 3s ease infinite;
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+    color: #FED128;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+    color: #806914;
+  }
+}
+
+.flux {
+  animation: flux 2s linear infinite;
+  -moz-animation: flux 2s linear infinite;
+  -webkit-animation: flux 2s linear infinite;
+  -o-animation: flux 2s linear infinite;
+}
+
+@keyframes flux {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #28D7FE;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+    color: #146C80;
+  }
+}
+
+#errorsPopup {
+  height: 370px
+}
+
+#magicErrors {
+  font-family: Luminari, fantasy;
+}
+
+#logo {
+height: 2.5vw;
+width: auto;
+}
+
+#bigdaddymid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

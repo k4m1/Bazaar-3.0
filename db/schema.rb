@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_07_225047) do
+ActiveRecord::Schema.define(version: 2019_11_08_182238) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,12 +21,12 @@ ActiveRecord::Schema.define(version: 2019_11_07_225047) do
     t.string "rarity"
     t.integer "collector_number"
     t.string "type_line"
-    t.string "printed_text"
+    t.string "oracle_text"
     t.string "name"
     t.string "set_name"
     t.string "image_uris"
     t.string "flavor_text"
-    t.integer "tcg_player_id"
+    t.integer "tcgplayer_id"
   end
 
   create_table "users", force: :cascade do |t|

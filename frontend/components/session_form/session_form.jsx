@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Button from "@material-ui/core/Button";
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -80,7 +80,7 @@ class SessionForm extends React.Component {
                             />
                         </div>
                         <br />
-                        <input id="loginButton" className="GreenButtonNoArrow" type="submit" value={this.props.formType.toUpperCase()} />
+                                    <Button onClick={this.handleSubmit} variant="contained" color="primary" id="loginButton" className="GreenButtonNoArrow" type="submit">{this.props.formType.toUpperCase()}</Button>
                     </div>
                 </form>
                 </div>

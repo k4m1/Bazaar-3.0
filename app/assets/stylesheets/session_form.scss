@@ -322,8 +322,8 @@ ul.newPassword {
     -moz-box-shadow: 2px 2px 3px 0px #b2b2b2;
     -webkit-box-shadow: 2px 2px 3px 0px #b2b2b2;
     box-shadow: 2px 2px 3px 0px #b2b2b2;
-    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e09036), color-stop(1, #ebb800) );
-    background: -moz-linear-gradient( center top, #e09036 5%, #ebb800 100% );
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ebb800), color-stop(1, #e09036) );
+    background: -moz-linear-gradient( center top, #ebb800 5%, #e09036 100% );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e09036', endColorstr='#86b437');
     background-color: #e09036;
   }
@@ -443,4 +443,9 @@ width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.magicFont {
+  font-family: Luminari, fantasy;
+
 }

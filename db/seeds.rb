@@ -37,7 +37,7 @@ cards_json.each do |card_datum|
     if card.id % CARD_LIMIT == 0
         p card.id
     end
-    if card.id == 
+    if card.id == CARD_LIMIT
         break
         # breaking for heroku limit of 10K rows
     end

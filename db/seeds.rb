@@ -5,8 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+CARD_LIMIT = 100
 
-if Card.count != 5000
+if Card.count != CARD_LIMIT
 
 cards_json = JSON.parse(File.read(Rails.root.join('db', 'scryfall-oracle-cards.json')))
 # debugger
@@ -33,10 +34,10 @@ cards_json.each do |card_datum|
         end
     end
     card.save!
-    if card.id % 100 == 0
+    if card.id % CARD_LIMIT == 0
         p card.id
     end
-    if card.id == 5000
+    if card.id == 
         break
         # breaking for heroku limit of 10K rows
     end

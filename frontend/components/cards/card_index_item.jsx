@@ -5,6 +5,7 @@ class IndexItem extends React.Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
+
     }
 
     handleClick() {
@@ -13,18 +14,32 @@ class IndexItem extends React.Component {
     }
 
     render() {
-        const { name, printed_text, image_uris  } = this.props.card;
+        const { name, image_uris, set_name, rarity, collector_number } = this.props.card;
+        let image = Object.values(JSON.parse(image_uris))
+        // console.log(image)
         return (
-            <div
-                className="card-index-item"
-                onClick={this.handleClick}
-            >
-                <div className="index-item-info">
-                    <span className="index-item-category">Description:</span>
-                    <span className="index-item-copy">{printed_text}</span>
-                </div>
-                <img src={Object.values(image_uris).first()} />
+
+<div className="product-details" onClick={this.handleClick}>
+
+    <div className='product-image'>   
+        <img src={image} className="image" />
+    </div>
+
+    <div className="product-summary">
+
+            <div className="product-name">{name}</div>
+            <span className="product-set">{set_name}</span>
+            <div className="product-misc">
+                <span className='spinny-span'>{`Rarity ${rarity}`}</span>
+
+                <span className='spinny-span'>{`Number ${collector_number}`}</span>
             </div>
+
+    </div>        
+
+
+</div>
+
         );
     }
 }

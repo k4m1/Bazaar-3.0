@@ -1,7 +1,7 @@
 import * as APIUtil from '../util/card_api_util';
 
-export const RECEIVE_CARDS = 'RECEIVE_BENCHES';
-export const RECEIVE_CARD = 'RECEIVE_BENCH';
+export const RECEIVE_CARDS = 'RECEIVE_CARDS';
+export const RECEIVE_CARD = 'RECEIVE_CARD';
 
 export const receiveCards = cards => ({
     type: RECEIVE_CARDS,

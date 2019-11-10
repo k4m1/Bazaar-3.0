@@ -43,7 +43,7 @@ class SessionForm extends React.Component {
                     <video id="background-video" loop autoPlay muted preload>
                         <source src={this.props.formType === 'signup' ? "https://bazaar-media-bucket.s3-us-west-1.amazonaws.com/daze.mp4 " : 'https://bazaar-media-bucket.s3-us-west-1.amazonaws.com/heros.mp4'} type="video/mp4" />
                         Your browser does not support the video tag.
-                    </video>
+                    </video> 
                 </div>
                
 

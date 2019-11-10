@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { palette } from '@material-ui/system';
 
 class IndexItem extends React.Component {
     constructor(props) {
@@ -16,30 +17,27 @@ class IndexItem extends React.Component {
     render() {
         const { name, image_uris, set_name, rarity, collector_number } = this.props.card;
         let image = Object.values(JSON.parse(image_uris))
-        // console.log(image)
         return (
 
-<div className="product-details" onClick={this.handleClick}>
+<div className="product-card" onClick={this.handleClick}>
 
-    <div className='product-image'>   
-        <img src={image} className="image" />
+    <div className="product-details">
+
+        <div className='product-image'>   
+            <img src={image} className="image" />
+        </div>
+
+        <div className="product-summary">
+                <div className="product-name">{name}</div>
+                <div className="product-misc">
+                    <span className="product-set">{`${set_name}`}</span>
+                    <span className='spinny-span'>{`Rarity: ${rarity} • Number: ${collector_number}`}</span>
+                </div>
+        </div>        
+
     </div>
 
-    <div className="product-summary">
-
-            <div className="product-name">{name}</div>
-            <span className="product-set">{set_name}</span>
-            <div className="product-misc">
-                <span className='spinny-span'>{`Rarity ${rarity}`}</span>
-
-                <span className='spinny-span'>{`Number ${collector_number}`}</span>
-            </div>
-
-    </div>        
-
-
 </div>
-
         );
     }
 }

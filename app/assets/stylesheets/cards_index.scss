@@ -315,9 +315,8 @@ font-weight: 800;
 }
 
 .banner-button:hover {
-background-color:#197f13;
-border-color: transparent;
-color:#fff;
+-webkit-box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 8px 8px 41px 8px rgba(0,0,0,0); 
+box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 8px 8px 41px 8px rgba(0,0,0,0);
 }
 
 .banner-button {
@@ -341,4 +340,18 @@ letter-spacing: -.011em;
 cursor: pointer;
 border-width: .0625rem;
 z-index: 1;
+border-radius: 4px;
+display: inline-flex;
+height: 2rem;
+position: relative;
+vertical-align: top;
+line-height: 2rem;
+align-items: center;
+border: .0625rem solid transparent;
+-webkit-appearance: none;
+-webkit-box-align: center;
+
+background-color:#197f13;
+border-color: transparent;
+color:#fff;
 }

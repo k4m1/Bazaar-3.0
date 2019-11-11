@@ -6,12 +6,13 @@ import {
 const cardsReducer = (oldState = {}, action) => {
     Object.freeze(oldState)
     let newState = Object.assign({}, oldState)
+    // debugger
 
     switch (action.type) {
         case RECEIVE_CARDS:
             return action.cards
         case RECEIVE_CARD:
-            newState[action.card.id] = action.card
+            newState[action.cardId] = action.card
             return newState
         default:
             return oldState

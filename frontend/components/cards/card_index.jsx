@@ -139,7 +139,7 @@ class CardIndex extends React.Component {
                                 key={card.id}
                             />
                         ))}
-                        </div>
+                        </div> 
                     </div>
                 </div>
                 )

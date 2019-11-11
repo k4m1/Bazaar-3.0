@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { palette } from '@material-ui/system';
 
 class IndexItem extends React.Component {
     constructor(props) {
@@ -10,12 +9,13 @@ class IndexItem extends React.Component {
     }
 
     handleClick() {
+        // debugger
         const cardId = this.props.card.id;
         this.props.history.push(`/cards/${cardId}`);
     }
 
     render() {
-        const { name, image_uris, set_name, rarity, collector_number } = this.props.card;
+        const { name, image_uris, set_name, rarity, collector_number, id } = this.props.card;
         let image = Object.values(JSON.parse(image_uris))
         return (
 
@@ -31,7 +31,7 @@ class IndexItem extends React.Component {
                 <div className="product-name">{name}</div>
                 <div className="product-misc">
                     <span className="product-set">{`${set_name}`}</span>
-                    <span className='spinny-span'>{`Rarity: ${rarity} • Number: ${collector_number}`}</span>
+                    <span className='spinny-span'>{`Rarity: ${rarity}  •  Number: ${collector_number}`}</span>
                 </div>
         </div>        
 

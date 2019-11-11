@@ -11,12 +11,6 @@ const CardShow = ({ card, cardId, fetchCard }) => {
         <div className="">
             <div className="">
                 <Link to="/">Back to Index</Link>
-                <CardMap
-                    cards={cards}
-                    cardsId={cardsId}
-                    singleCard={true}
-                    fetchCard={fetchCard}
-                />
             </div>
             <div className="">
                 <CardDetail card={card} />

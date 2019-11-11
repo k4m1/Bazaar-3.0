@@ -8,7 +8,7 @@ export const fetchCards = data => {
     })
 }
 
-export const fetchCard = (cardId) => {
+export const fetchCard = cardId => {
     return $.ajax({
         method: 'GET',
         url: `/api/cards/${cardId}`,

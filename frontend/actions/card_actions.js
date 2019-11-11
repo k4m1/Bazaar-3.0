@@ -17,7 +17,7 @@ export const fetchCards = () => dispatch => (
     .then(cards => dispatch(receiveCards(cards)))
 )
 
-export const fetchCard = (name) => dispatch => (
-    APIUtil.fetchCard(name)
+export const fetchCard = cardId => dispatch => (
+    APIUtil.fetchCard(cardId)
         .then(card => dispatch(receiveCard(card)))
 )

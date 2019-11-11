@@ -19,11 +19,14 @@ card_cols = Card.column_names.reject {|ele| ele == 'id' || ele == 'created_at' |
 # data = JSON.parse(File.read(Rails.root + "public/sample_seeds.js"))
 # debugger
 cards_json.each do |card_datum|
+    # counter = 1
     # debugger
     if card_datum['tcgplayer_id'].nil?
         next
     end
     card = Card.new
+    # card.id = counter
+    # debugger
 
     card_cols.each do |key|
 
@@ -34,6 +37,7 @@ cards_json.each do |card_datum|
         end
     end
     card.save!
+    # counter += 1
     if card.id % CARD_LIMIT == 0
         p card.id
     end

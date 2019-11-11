@@ -254,4 +254,91 @@ padding: 2rem 0 3rem 0;
 background:rgba(0,0,0,.03);
 }
 
+.banner-container {
+background:#5f6d7a;
+color:#fff;
+position: relative;
+overflow: hidden;
+width: 100%;
+}
 
+.carousel-title {
+font-size: 1.25rem;
+letter-spacing: -.017em;
+font-weight: 700;
+color:#171717;
+margin-bottom: 1.5rem;
+text-align: center;
+}
+
+.banner-subhead {
+font-size: .875rem;
+letter-spacing: -.006em;
+font-weight: 800;
+line-height: 2rem;
+margin: 0;
+text-transform: uppercase;
+text-indent: 2px;
+color:#20a619;
+}
+
+.banner-image {
+position: absolute;
+top: 0;
+bottom: 0;
+height: 100%;
+// -o-object-fit: cover;
+object-fit: cover;
+// -o-object-position: 50% 50%;
+object-position: 50% 50%;
+z-index: -99;
+width: 100%;
+max-width: 100%;
+}
+
+.banner-content {
+padding: 4rem;
+position: relative;
+z-index: 1;
+height: 100%;
+background-image: radial-gradient(circle at bottom left,
+rgba(0,0,0,.8) 0,rgba(0,0,0,.6) 30%,transparent 60%);
+}
+
+.banner-title {
+font-size: 3rem;
+-webkit-font-feature-settings: "ss01";
+font-feature-settings: "ss01";
+letter-spacing: -.022em;
+line-height: 3rem;
+font-weight: 800;
+}
+
+.banner-button:hover {
+background-color:#197f13;
+border-color: transparent;
+color:#fff;
+}
+
+.banner-button {
+justify-content: center;
+padding-bottom: calc(.375em - .0625rem);
+padding-left: .75em;
+padding-right: .75em;
+padding-top: calc(.375em - .0625rem);
+text-align: center;
+white-space: nowrap;
+margin-top: .25rem;
+margin-bottom: .25rem;
+-webkit-box-shadow: 0 10px 20px hsla(0,0%,9%,.19),0 6px 6px hsla(0,0%,9%,.23);
+box-shadow: 0 10px 20px
+hsla(0,0%,9%,.19),0 6px 6px
+hsla(0,0%,9%,.23);
+font-weight: 500;
+font-size: 1rem;
+letter-spacing: -.011em;
+-webkit-box-pack: center;
+cursor: pointer;
+border-width: .0625rem;
+z-index: 1;
+}

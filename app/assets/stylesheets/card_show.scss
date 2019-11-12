@@ -1,3 +1,8 @@
+
+body {
+    font-family: sans-serif;
+}
+
 .product-details-container {
 padding-top: 2rem;
 padding-bottom: 4rem;
@@ -26,6 +31,11 @@ flex: 0 0 200px;
 margin-bottom: 1rem;
 max-width: 100%;
 height: auto;
+vertical-align: middle;
+border-style: none;
+
+height: auto;
+max-width: 100%;
 }
 
 .product-details-content {

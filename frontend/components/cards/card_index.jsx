@@ -94,40 +94,48 @@ class CardIndex extends React.Component {
                                 <Slider {...settingsCarousel} className="">
 
                                     <div>
-                                        <h3>1</h3>
+                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
+                                        
                                     </div>
                                     <div>
-                                        <h3>2</h3>
+                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
+
                                     </div>
                                     <div>
-                                        <h3>3</h3>
+                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
+
                                     </div>
                                     <div>
-                                        <h3>4</h3>
+                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
+
                                     </div>
                                     <div>
-                                        <h3>5</h3>
+                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
+
                                     </div>
                                     <div>
-                                        <h3>6</h3>
+                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
+                                        
                                     </div>
                                     <div>
-                                        <h3>7</h3>
+                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
                                     </div>
                                     <div>
-                                        <h3>8</h3>
+                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
                                     </div>
                                     <div>
-                                        <h3>9</h3>
+                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
                                     </div>
                                     <div>
-                                        <h3>10</h3>
+                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
+
                                     </div>
                                     <div>
-                                        <h3>11</h3>
+                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
+
                                     </div>
                                     <div>
-                                        <h3>12</h3>
+                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
                                     </div>
                                 </Slider>
                         </div>

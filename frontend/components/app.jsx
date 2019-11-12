@@ -21,7 +21,7 @@ const App = () => (
     <div>
         <header>
             <Link to="/" className="header-link">
-                <img src="//s3.amazonaws.com/tcgplayer-twilight-static-assets/TCGplayer-logo-primary@2x.png" alt="" id="logo"/>
+                <img src="https://bazaar-media-bucket.s3-us-west-1.amazonaws.com/LogoMakr_96Ipsy.png" alt="" id="logo"/>
             </Link>
             <GreetingContainer />
         </header>
@@ -30,7 +30,6 @@ const App = () => (
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
             <Route exact path="/" component={CardIndexContainer} />
             <Route path="/cards/:cardId" component={CardShowContainer} />
-
         </Switch>
     </div>
 );

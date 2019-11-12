@@ -47,20 +47,20 @@ class CardShow extends React.Component {
 
                                      <hr />
 
-                                     <table className='product-details-table'>
-                            <tbody>
-                                <tr>
-                                    <td></td>
-                                    <dl className='product-details-desciption'>
-                                        <dt className='product-details-description-term'>Rarity, #:</dt>
-                                        <dd className='product-details-description-value'>{`${this.props.card.rarity}, ${this.props.card.collector_number}`}</dd>
-
-                                        <dt className='product-details-description-term'>Card Type:</dt>
-                                        <dd className='product-details-description-value'>{this.props.card.type_line}</dd>
-                                    </dl>
-                                </tr>
-                            </tbody>
-                        </table>
+                                     <table className="product-details-table">
+                                         <tr className="product-details-table-description">
+                                             <td className="product-details-table-description-term">Rarity:</td>
+                                             <td className="product-details-table-description-value">{this.props.card.rarity}</td>
+                                         </tr>
+                                         <tr>
+                                             <td className="product-details-table-description-term">Card Type:</td>
+                                             <td className="product-details-table-description-value">{this.props.card.type_line}</td>
+                                         </tr> 
+                                         <tr>
+                                             <td className="product-details-table-description-term">Description:</td>
+                                             <td className="product-details-table-description-value">{this.props.card.oracle_text}</td>
+                                        </tr>
+                                    </table>
 
                                      <div className='featured listing'>
 

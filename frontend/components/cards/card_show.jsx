@@ -16,6 +16,7 @@ class CardShow extends React.Component {
     render() {
 
         let display;
+        let image = Object.values(JSON.parse(this.props.card.image_uris))
 
              if (this.props.card === undefined) {
                  display = null
@@ -29,7 +30,7 @@ class CardShow extends React.Component {
                              <div className="product-details-info">
 
                                  <div className='product-details-image'>
-
+                                     <img src={image} alt=""/>
                                  </div>
 
                                  <div className='product-details-content'>
@@ -39,27 +40,27 @@ class CardShow extends React.Component {
                                          <h1 className="product-details-content-name">{this.props.card.name}</h1>
 
                                          <div className="product-details-content-set">
-                                             <a href="">{this.props.set_name}</a>
+                                             <a href="">{this.props.card.set_name}</a>
                                          </div>
 
                                      </div>
 
                                      <hr />
 
-                                     {/* <table className='product-details-table'>
+                                     <table className='product-details-table'>
                             <tbody>
                                 <tr>
                                     <td></td>
                                     <dl className='product-details-desciption'>
                                         <dt className='product-details-description-term'>Rarity, #:</dt>
-                                        <dd className='product-details-description-value'>R, 69</dd>
+                                        <dd className='product-details-description-value'>{`${this.props.card.rarity}, ${this.props.card.collector_number}`}</dd>
 
                                         <dt className='product-details-description-term'>Card Type:</dt>
-                                        <dd className='product-details-description-value'>Legendary creature</dd>
+                                        <dd className='product-details-description-value'>{this.props.card.type_line}</dd>
                                     </dl>
                                 </tr>
                             </tbody>
-                        </table> */}
+                        </table>
 
                                      <div className='featured listing'>
 

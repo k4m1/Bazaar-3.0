@@ -23,6 +23,7 @@ class CardShow extends React.Component {
              } else {
                  display = (
 
+                <div>
 
                      <div className="product-details-container">
                          <div className="container">
@@ -30,7 +31,7 @@ class CardShow extends React.Component {
                              <div className="product-details-info">
 
                                  <div className='product-details-image'>
-                                     <img src={image} alt=""/>
+                                     <img src={image} className="product-details-image-picture" />
                                  </div>
 
                                  <div className='product-details-content'>
@@ -60,19 +61,44 @@ class CardShow extends React.Component {
                                              <td className="product-details-table-description-term">Description:</td>
                                              <td className="product-details-table-description-value">{this.props.card.oracle_text}</td>
                                         </tr>
+
+                                        <tr>
+                                            <td className="product-details-table-description-term">Flavor:</td>
+                                            <td className="product-details-table-description-value">{this.props.card.flavor_text}</td>
+                                        </tr>
+
                                     </table>
+
+                                     <hr />
 
                                      <div className='featured listing'>
 
                                      </div>
 
+                                    
+
                                  </div>
+
 
                              </div>
 
                          </div>
 
                      </div>
+
+                    <div className="container">
+                        <div className="price-guide-description">
+                            <img src="logo_PriceGuide.png" />
+
+                            <span>
+                                <strong>Want to learn how to become a pricing pro?</strong>
+                                Learn how we price cards <a href="">here</a>
+                            </span>
+                            
+                        </div>
+                    </div>
+
+                </div>
 
                  )
              }

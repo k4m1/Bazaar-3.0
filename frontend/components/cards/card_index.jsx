@@ -1,6 +1,8 @@
 import React from 'react';
 import CardIndexItem from './card_index_item';
 import { fetchCards } from '../../actions/card_actions';
+import {Link} from 'react-router-dom';
+// import { randomCard } from '../../components/cards/card_index_container'
 
 import Slider from "react-slick";
 
@@ -17,14 +19,21 @@ class CardIndex extends React.Component {
     constructor(props) {
         super(props)
 
+        //   const randomCard = () => {
+        //     return (
+        //         this.props.cards[Math.floor(Math.random * 100)]
+        //     )
+        // }
+
     }
+
 
     render() {
 
         const settingsCarousel = {
             dots: true,
             infinite: true,
-            speed: 300,
+            speed: 225,
             slidesToShow: 6,
             slidesToScroll: 1,
             autoplay: true,
@@ -37,7 +46,32 @@ class CardIndex extends React.Component {
 
 
         let display; 
+            let carousel;
+
+        // debugger
+
             if ( this.props.cards ) {
+
+
+                if (this.props.randomCards[0]) {
+
+                    carousel = (
+                        <Slider {...settingsCarousel} className="">
+
+                            {this.props.randomCards.map(card =>
+                                <Link to={`/cards/${card.id}`}>
+                                    <img src={Object.values(JSON.parse(card.image_uris))} />
+                                </Link>)}
+
+
+                        </Slider>
+                    )
+
+                } else {
+                    carousel = null
+                }
+
+
                 display = (
 
                 <div>
@@ -65,6 +99,8 @@ class CardIndex extends React.Component {
 
                                         <label className="sort-toolbar-label">Sort Products By:</label>
                                             <select className="sort-toolbar-select-form-control">
+
+                                                {/* remember to update these actions for your fitlers */}
                                                 <option value="Sales DESC">Best Selling</option>
                                                 <option value="Sales DESC">Relevance</option>
                                                 <option value="Sales DESC">A-Z</option>
@@ -91,53 +127,8 @@ class CardIndex extends React.Component {
                                 <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
                                 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
 
-                                <Slider {...settingsCarousel} className="">
-
-                                    <div>
-                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
-                                        
-                                    </div>
-                                    <div>
-                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
-
-                                    </div>
-                                    <div>
-                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
-
-                                    </div>
-                                    <div>
-                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
-
-                                    </div>
-                                    <div>
-                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
-
-                                    </div>
-                                    <div>
-                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
-                                        
-                                    </div>
-                                    <div>
-                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
-                                    </div>
-                                    <div>
-                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
-                                    </div>
-                                    <div>
-                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
-                                    </div>
-                                    <div>
-                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
-
-                                    </div>
-                                    <div>
-                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
-
-                                    </div>
-                                    <div>
-                                        <img src={this.props.cards[0] && Object.values(JSON.parse(this.props.cards[Math.floor(Math.random() * 100)].image_uris))} />
-                                    </div>
-                                </Slider>
+                                { carousel }
+                              
                         </div>
 
                         <div className="cataloge-content">

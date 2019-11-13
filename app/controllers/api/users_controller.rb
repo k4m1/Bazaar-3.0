@@ -1,7 +1,7 @@
 class Api::UsersController < ApplicationController
   def create
     @user = User.new(user_params)
-    @user.store_credit = 0;
+    # @user.store_credit = 0;
 
     if @user.save
       login(@user)

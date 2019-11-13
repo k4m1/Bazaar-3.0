@@ -24,6 +24,7 @@ const App = () => (
                 <img src="https://bazaar-media-bucket.s3-us-west-1.amazonaws.com/LogoMakr_96Ipsy.png" alt="" id="logo"/>
             </Link>
             <SearchContainer />
+            <GreetingContainer />
             <nav className="main-nav"></nav>
         </header>
         <Switch>

@@ -19,13 +19,23 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
     <div>
-        <header>
-            <Link to="/" className="header-link">
-                <img src="https://bazaar-media-bucket.s3-us-west-1.amazonaws.com/LogoMakr_96Ipsy.png" alt="" id="logo"/>
+
+        <header className="">
+            <div className="marketplace-content the-daddy-div">
+            <Link to="/" className="header-link" className="header-logo center">
+                <img src="https://bazaar-media-bucket.s3-us-west-1.amazonaws.com/LogoMakr_96Ipsy.png" id="logo" />
             </Link>
-            <SearchContainer />
-            <GreetingContainer />
+
+            <div className="search-wrapper">
+                <SearchContainer />
+            </div>
+
+            <div className="greeting-wrapper center">
+                <GreetingContainer />
+            </div>
+
             <nav className="main-nav"></nav>
+    </div>
         </header>
         <Switch>
             <AuthRoute exact path="/login" component={LogInFormContainer} />
@@ -34,6 +44,7 @@ const App = () => (
             <Route path="/cards/:cardId" component={CardShowContainer} />
         </Switch>
     </div>
+
 );
 
 export default App;

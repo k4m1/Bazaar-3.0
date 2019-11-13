@@ -7,9 +7,9 @@ const Greeting = ({ currentUser, logout }) => {
 
     const sessionLinks = () => (
         <nav className="login-signup">
-            <Link to="/login" className="GreenButtonNoArrow">Login</Link>
+            <Link to="/login" className="button">Login</Link>
             &nbsp;or&nbsp;
-            <Link to="/signup" className='GreenButtonNoArrow'>Sign up</Link>
+            <Link to="/signup" className='button'>Sign up</Link>
         </nav>
     );
     const personalGreeting = () => (

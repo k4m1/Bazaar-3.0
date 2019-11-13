@@ -125,6 +125,7 @@ class CardIndex extends React.Component {
                             <CardIndexItem
                                 card={card}
                                 key={card.id}
+                                value={card.name}
                             />
                         ))}
                         </div> 
@@ -137,13 +138,13 @@ class CardIndex extends React.Component {
 
         return (
             <div>
-                <div className="product-filter-container">
+                {/* <div className="product-filter-container">
                     <div className="product-filter-box">
                         <li className="filter-box-list-item"></li>
                         <li className="filter-box-list-item"></li>
                         <li className="filter-box-list-item"></li>
                     </div>
-                </div>
+                </div> */}
                 { display }
             </div>
         )

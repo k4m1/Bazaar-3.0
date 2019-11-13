@@ -10,35 +10,46 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 // import parse from 'autosuggest-highlight/parse';
 // import match from 'autosuggest-highlight/match';
 
-const Search = ({ cards }) => (
+class Search extends React.Component {
 
-    <div className="search-wrapper">
+    constructor(props) {
+        super(props)
 
-    <Autocomplete
-        className=""
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
 
-        freeSolo
-        id=""
-        disableClearable
-        options={cards.map(card => card.name)}
-        renderInput={params => (
-            <TextField
-                {...params}
-                className="search-input"
-                label="Explore the multiverse"
-                margin="normal"
-                variant="outlined"
-                fullWidth
-                InputProps={{ ...params.InputProps, type: 'search' }}
+    handleSubmit(e) {
+        let card = this.props.cards[this.props.cards.indexOf(e.currentTarget.value)]
+        history.push(`/cards/${card.id}`)
+    }
+
+    render() {
+        return (
+
+            <Autocomplete
+                className="search-wrapper"
+                freeSolo
+                id=""
+                disableClearable
+                options={this.props.cards.map(card => card.name)}
+                renderInput={params => (
+                    <TextField
+                        {...params}
+                        className="search-input"
+                        label="Explore the multiverse"
+                        margin="normal"
+                        variant="outlined"
+                        onSubmit={this.handleSubmit}
+                        InputProps={{ ...params.InputProps, type: 'search' }}
+                    />
+                )}
             />
-        )}
-    />
+        )
+    }
 
-        {/* <CardIndexContainer cards={cards} randomCards={randomCards} /> */}
 
-    </div>
 
-);
+};
 
 export default Search;
 

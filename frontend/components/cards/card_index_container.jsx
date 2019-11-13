@@ -9,8 +9,6 @@ import { randomCards } from '../../reducers/cards_selector'
 
 const mSTP = state => {
 
-    debugger
-
     return ({
         cards: cardsSelector(state.entities),
         randomCards: randomCards(state),

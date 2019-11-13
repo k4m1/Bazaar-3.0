@@ -17,7 +17,10 @@ export const randomCards = state => {
         randomCards.push(random_card)
     }
 
-    // debugger
     return (randomCards)
 
 };
+
+export const asArray = ({ cards }) => (
+    Object.keys(cards).map(key => cards[key])
+);

@@ -2,7 +2,6 @@ import React from 'react';
 import CardIndexItem from './card_index_item';
 import { fetchCards } from '../../actions/card_actions';
 import {Link} from 'react-router-dom';
-// import { randomCard } from '../../components/cards/card_index_container'
 
 import Slider from "react-slick";
 
@@ -10,20 +9,10 @@ class CardIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchCards()
-        // console.log(this.props.cards)
-        // fetch('https://api.scryfall.com/cards/random/')
-        //     .then(response => response.json())
-        //     .then(image1 => this.setState({ image1 }))
     }
 
     constructor(props) {
         super(props)
-
-        //   const randomCard = () => {
-        //     return (
-        //         this.props.cards[Math.floor(Math.random * 100)]
-        //     )
-        // }
 
     }
 
@@ -52,7 +41,7 @@ class CardIndex extends React.Component {
 
             if ( this.props.cards ) {
 
-
+                // debugger
                 if (this.props.randomCards[0]) {
 
                     carousel = (

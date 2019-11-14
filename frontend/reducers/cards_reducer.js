@@ -12,7 +12,7 @@ const cardsReducer = (oldState = {}, action) => {
         case RECEIVE_CARDS:
             return action.cards
         case RECEIVE_CARD:
-            newState[action.cardId] = action.card
+            newState[action.card.id] = action.card
             return newState
         default:
             return oldState

@@ -20,7 +20,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
     <div>
 
-        <header className="">
+        <header className="lessLoud">
             <div className="marketplace-content the-daddy-div">
             <Link to="/" className="header-link" className="header-logo center">
                 <img src="https://bazaar-media-bucket.s3-us-west-1.amazonaws.com/LogoMakr_96Ipsy.png" id="logo" />

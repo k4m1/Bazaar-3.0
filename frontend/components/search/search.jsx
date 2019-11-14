@@ -7,6 +7,7 @@ import { randomCards } from '../../reducers/cards_selector'
 
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
+import { Button } from '@material-ui/core';
 // import parse from 'autosuggest-highlight/parse';
 // import match from 'autosuggest-highlight/match';
 
@@ -19,8 +20,9 @@ class Search extends React.Component {
     }
 
     handleSubmit(e) {
+        // debugger
         let card = this.props.cards[this.props.cards.indexOf(e.currentTarget.value)]
-        history.push(`/cards/${card.id}`)
+        this.props.history.push(`/cards/${card.id}`)
     }
 
     render() {
@@ -39,7 +41,7 @@ class Search extends React.Component {
                         label="Explore the multiverse"
                         margin="normal"
                         variant="outlined"
-                        onSubmit={this.handleSubmit}
+                        onClick={this.handleSubmit}
                         InputProps={{ ...params.InputProps, type: 'search' }}
                     />
                 )}

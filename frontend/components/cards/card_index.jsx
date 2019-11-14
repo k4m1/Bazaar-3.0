@@ -10,6 +10,7 @@ class CardIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchCards()
+        window.scrollTo(0, 0)
     }
 
     constructor(props) {
@@ -40,31 +41,31 @@ class CardIndex extends React.Component {
 
         // debugger
 
-            if ( this.props.cards ) {
+            if ( this.props.cards[0] ) {
 
                 // debugger
-                if (this.props.randomCards[0]) {
+                // if (this.props.randomCards[0]) {
 
-                    carousel = (
-                        <Slider {...settingsCarousel} className="">
+                //     carousel = (
+                //         <Slider {...settingsCarousel} className="card-carousel">
 
-                            {this.props.randomCards.map(card =>
-                                <Link to={`/cards/${card.id}`}>
-                                    <img src={Object.values(JSON.parse(card.image_uris))} />
-                                </Link>)}
+                //             {this.props.randomCards.map(card =>
+                //                 <Link to={`/cards/${card.id}`}>
+                //                     <img key={card.id} src={Object.values(JSON.parse(card.image_uris))} />
+                //                 </Link>)}
 
 
-                        </Slider>
-                    )
+                //         </Slider>
+                //     )
 
-                } else {
-                    carousel = null
-                }
+                // } else {
+                //     carousel = null
+                // }
 
 
                 display = (
 
-                <div>
+                <div className="workPlz">
 
                         <Particles
                         className="canvas-tings"
@@ -183,7 +184,15 @@ class CardIndex extends React.Component {
                                 <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
                                 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
 
-                                { carousel }
+                                <Slider {...settingsCarousel} className="card-carousel">
+
+                                    {this.props.randomCards.map(card =>
+                                        <Link to={`/cards/${card.id}`}>
+                                            <img key={card.id} src={Object.values(JSON.parse(card.image_uris))} />
+                                        </Link>)}
+
+
+                                </Slider>
                               
                         </div>
 

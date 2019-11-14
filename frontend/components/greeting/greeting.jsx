@@ -1,26 +1,36 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Button from "@material-ui/core/Button";
+import Button from '@material-ui/core/Button';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 
+export default function SimpleMenu() {
+    const [anchorEl, setAnchorEl] = React.useState(null);
 
-const Greeting = ({ currentUser, logout }) => {
+    const handleClick = event => {
+        setAnchorEl(event.currentTarget);
+    };
 
-    const sessionLinks = () => (
-        <nav className="login-signup">
-            <Link to="/login" className="button">Login</Link>
-            &nbsp;or&nbsp;
-            <Link to="/signup" className='button'>Sign up</Link>
-        </nav>
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    return (
+        <div>
+            <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+                Account
+      </Button>
+            <Menu
+                id="simple-menu"
+                anchorEl={anchorEl}
+                keepMounted
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+            >
+                <MenuItem id="/signup" onClick={handleClose}>Signup</MenuItem>
+                <MenuItem id="/login" onClick={handleClose}>Login</MenuItem>
+                <MenuItem onClick={handleClose}>Logout</MenuItem>
+            </Menu>
+        </div>
     );
-    const personalGreeting = () => (
-        <hgroup className="header-group">
-            <h2 className="neon">WELCOME, {currentUser.email}!</h2>
-            <button className="header-button" onClick={logout}>Log Out</button>
-        </hgroup>
-    );
+}
 
-    return currentUser ? personalGreeting() : sessionLinks();
-};
-
-
-export default Greeting;

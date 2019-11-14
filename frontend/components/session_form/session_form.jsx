@@ -53,7 +53,7 @@ class SessionForm extends React.Component {
 
 
                 <form onSubmit={this.handleSubmit} className="accountLogin">
-                    <h2 className="neon h2 centered">Welcome to: TCGPlayer</h2>
+                    <h2 className="neon h2 centered">Welcome to: The Bazaar</h2>
           <hr />
           <div className="formInputEmailError neon" id="magicErrors">
                     {this.renderErrors()}

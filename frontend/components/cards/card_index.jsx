@@ -4,6 +4,7 @@ import { fetchCards } from '../../actions/card_actions';
 import {Link} from 'react-router-dom';
 
 import Slider from "react-slick";
+import Particles from 'react-particles-js';
 
 class CardIndex extends React.Component {
 
@@ -64,6 +65,72 @@ class CardIndex extends React.Component {
                 display = (
 
                 <div>
+
+                        <Particles
+                        className="canvas-tings"
+                            params={{
+                                "particles": {
+                                    "number": {
+                                        "value": 125,
+                                        "density": {
+                                            "enable": true,
+                                            "value_area": 800
+                                        }
+                                    },
+                                    "line_linked": {
+                                        "enable": false
+                                    },
+                                    "move": {
+                                        "speed": 2,
+                                        "out_mode": "out"
+                                    },
+                                    "shape": {
+                                        "type": [
+                                            "images",
+                                            "circle"
+                                        ],
+                                        "images": [
+                                            {
+                                                "src": "blueMana.png",
+                                                "height": 20,
+                                                "width": 20
+                                            },
+                                            {
+                                                "src": "redMana.png",
+                                                "height": 20,
+                                                "width": 20
+                                            },
+                                            {
+                                                "src": "blackMana.png",
+                                                "height": 20,
+                                                "width": 20
+                                            },
+                                            {
+                                                "src": "whiteMana.png",
+                                                "height": 20,
+                                                "width": 20
+                                            },
+                                            {
+                                                "src": "greenMana.png",
+                                                "height": 20,
+                                                "width": 20
+                                            }
+                                        ]
+                                    },
+                                    
+                                    "size": {
+                                        "value": 30,
+                                        "random": false,
+                                        "anim": {
+                                            "enable": true,
+                                            "speed": 6,
+                                            "size_min": 10,
+                                            "sync": false
+                                        }
+                                    }
+                                },
+                                "retina_detect": false
+                            }} />
 
                     <div className='banner-container'>
                         <div className='banner-content'>

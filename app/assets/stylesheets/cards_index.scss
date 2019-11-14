@@ -359,3 +359,10 @@ background-color:#197f13;
 border-color: transparent;
 color:#fff;
 }
+
+ canvas{
+      position:absolute;
+      left:0;
+      top:0;
+      z-index:-1;
+    }

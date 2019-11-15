@@ -1,7 +1,16 @@
 class Api::CardsController < ApplicationController
   def index
+
+    if params[:limit]
+      # debugger
+
+      @cards = Card.offset(rand(980)).limit(params[:limit])
+  else
+
     @cards = Card.all
+  end
     render :index
+
   end
 
   def show

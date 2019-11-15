@@ -6,13 +6,12 @@ import Slider from "react-slick";
 import Particles from 'react-particles-js';
 
 
-
 class CardShow extends React.Component {
 
     componentDidMount() {
-        // debugger
+        this.props.fetchRandomCards(20)
         this.props.fetchCard(this.props.match.params.cardId)
-            .then(this.setState({['test']: "work dammit"}))
+        .then(this.setState({['test']: "work dammit"}))
         window.scrollTo(0, 0)
 
     }
@@ -22,10 +21,13 @@ class CardShow extends React.Component {
         // debugger
         // debugger
         test: ""
+
     }
 
 
     render() {
+
+        // debugger
 
     const settingsCarousel = {
         dots: true,
@@ -145,7 +147,7 @@ class CardShow extends React.Component {
                             <div className="product-details-info">
 
                                 <div className='product-details-image'>
-                                        <img src={Object.values(JSON.parse(this.props.card.image_uris))} className="product-details-image-picture" />
+                                        <img src={this.props.card.image_uris} className="product-details-image-picture" />
                                 </div>
 
                                 <div className='product-details-content'>
@@ -199,24 +201,7 @@ class CardShow extends React.Component {
 
                         </div>
 
-                            {/* <div className='card-carousel'>
-
-                                <h1 className='carousel-title'>Featured Cards</h1>
-
-                                <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-                                <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
-
-                                <Slider {...settingsCarousel} className="card-carousel">
-
-                                    {this.props.randomCards.map(cardCar =>
-                                        <Link to={`/cards/${cardCar.id}`}>
-                                            <img key={cardCar.id} src={Object.values(JSON.parse(cardCar.image_uris))} />
-                                        </Link>)}
-
-
-                                </Slider>
-
-                            </div> */}
+                          
 
 
                     </div>
@@ -232,6 +217,25 @@ class CardShow extends React.Component {
                         
                     </div>
                 </div> */}
+
+            <div className='card-carousel'>
+
+                    <h1 className='carousel-title'>Related Cards</h1>
+
+                    <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+                    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+
+                    <Slider {...settingsCarousel} className="card-carousel">
+
+                        {this.props.randomCards.map(cardCar =>
+                            <Link to={`/cards/${cardCar.id}`}>
+                                <img key={cardCar.id} src={cardCar.image_uris} />
+                            </Link>)}
+
+
+                    </Slider>
+
+                </div>
 
             </div>
 

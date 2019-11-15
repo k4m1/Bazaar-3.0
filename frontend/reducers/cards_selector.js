@@ -1,3 +1,5 @@
+
+
 export const cardsSelector = ({cards}) => (
     Object.keys(cards).map(key => cards[key])
 )
@@ -9,12 +11,20 @@ export const selectCard = ({ cards }, cardId) => {
 export const randomCards = state => {
     Object.freeze(state);
     let newState = Object.assign({}, state)
-    let { cards } = newState.entities
     let randomCards = []
 
-    while (randomCards.length < 20) {
-        let random_card = cards[Math.floor(Math.random() * 100)]
+    // debugger
+    if (Object.values(state.entities.cards).length < 20) {
+        return [];
+    }
+
+    let cards = Object.values(state.entities.cards)
+    let i = 0
+    while (i < 20) {
+        let random_card = cards[i]
         randomCards.push(random_card)
+        i++
+        
     }
 
     return (randomCards)

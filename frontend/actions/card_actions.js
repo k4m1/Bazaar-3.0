@@ -21,3 +21,9 @@ export const fetchCard = cardId => dispatch => (
     APIUtil.fetchCard(cardId)
         .then(card => dispatch(receiveCard(card)))
 )
+
+export const fetchRandomCards = numCards => dispatch => (
+    APIUtil.fetchRandomCards(numCards)
+        .then(randomCards => dispatch(receiveCards(randomCards)))
+
+)

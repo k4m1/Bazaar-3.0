@@ -16,13 +16,13 @@ class IndexItem extends React.Component {
 
     render() {
         const { name, image_uris, set_name, rarity, collector_number, id } = this.props.card;
-        let image = Object.values(JSON.parse(image_uris))
+        let image = image_uris
         return (
 
 <div className="product-card" onClick={this.handleClick}>
 
-    <div className="product-details">
-
+    <div className="product-details hvr-grow-shadow">
+            
         <div className='product-image'>   
             <img src={image} className="image" />
         </div>

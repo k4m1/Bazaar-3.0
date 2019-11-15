@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-CARD_LIMIT = 100
+CARD_LIMIT = 1000
 
 if Card.count != CARD_LIMIT
 
@@ -31,12 +31,20 @@ cards_json.each do |card_datum|
     card_cols.each do |key|
 
         if key == 'image_uris'
-            card[key] = card_datum[key].to_json
+            # debugger
+            if card_datum[key]
+                card[key] = card_datum[key]['small']
+            end
+
         else
             card[key] = card_datum[key]
         end
     end
+    if card.image_uris
     card.save!
+    else
+        next
+    end
     # counter += 1
     if card.id % CARD_LIMIT == 0
         p card.id

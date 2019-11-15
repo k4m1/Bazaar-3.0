@@ -13,3 +13,10 @@ export const fetchCard = cardId => {
         url: `/api/cards/${cardId}`,
     })
 }
+
+export const fetchRandomCards = numCards => {
+    return $.ajax({
+        url: `/api/cards/`,
+        data: {limit: numCards }
+    })
+}

@@ -10,7 +10,7 @@ const cardsReducer = (oldState = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_CARDS:
-            return action.cards
+            return Object.assign(newState, action.cards)
         case RECEIVE_CARD:
             newState[action.card.id] = action.card
             return newState

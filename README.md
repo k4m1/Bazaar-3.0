@@ -25,3 +25,16 @@ modification of the database. The front end stores the necessary information for
 rendering upon site entry. Other requests are made on a “need to know” basis by
 various React components. This minimizes info passed between the frontend
 and backend and allows for speedy re-rendering handled by React.
+
+###Authentication
+
+*Auth Page*
+
+*Normal Authentication*
+
+Users of the site are required to authenticate or sign up. Navigation to any
+other "protected" section of the site before authentication will redirect back to auth. The
+user model requires a unique email adress and password (not necessarily unique) for
+sign up. Upon account creation, user passwords are digested using the B-Crypt
+gem before being stored.
+

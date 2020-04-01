@@ -1,4 +1,4 @@
-# AnkiClone
+# The Bazaar
 
 Check out a live version of The Bazaar here:
 

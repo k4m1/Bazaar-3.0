@@ -28,7 +28,7 @@
     "redux-thunk": "^2.3.0",
     "slick-carousel": "^1.8.1",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.12"
   },
   "engines": {
     "node": "10.13.0",
